@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tech Rush · EducaTV × BentoTec</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="net"></canvas>
+<canvas id="fx"></canvas>
+<button class="mute" id="mute" aria-label="Ligar ou desligar o som">🔇</button>
+<main class="wrap">
+
+<section class="screen on" id="s-start">
+  <div class="chip">EducaTV × BentoTec · <b>21 e 22 de outubro</b></div>
+  <div class="hero">
+    <img class="brand" alt="EducaTV Campinas" src="logo.jpg">
+    <h1 class="logo">TECH<br>RUSH</h1>
+    <p class="sub">8 perguntas, 12 segundos cada. Quanto mais rápido você responde, mais pontos ganha.</p>
+    <p class="rec" id="rec"></p>
+  </div>
+  <input id="nome" maxlength="14" autocomplete="off" enterkeyhint="go" placeholder="Digite seu nome" aria-label="Seu nome">
+  <button class="btn" id="play">Começar</button>
+  <div class="foot">17ª edição do BentoTec · ETEC Bento Quirino, Campinas</div>
+</section>
+
+<section class="screen" id="s-game">
+  <div class="hud">
+    <img class="mini" alt="" src="logo.jpg">
+    <div class="sc"><small>Pontos</small><strong id="score">0</strong></div>
+    <div class="prog" id="prog">1/8</div>
+  </div>
+  <div class="combo" id="combo"></div>
+  <div class="bar" id="bar"><i id="fill"></i></div>
+  <div class="bubble" id="bubble"></div>
+  <div class="qcard" id="qcard"><div class="tag" id="tag"></div><h2 id="qtext"></h2></div>
+  <div class="opts" id="opts"></div>
+</section>
+
+<section class="screen" id="s-go">
+  <div class="hero">
+    <h2 class="disp" style="font-size:2.2rem">Boa, <span id="gname"></span>!</h2>
+    <p class="sub">Seu resultado está pronto. Inscreva-se no canal da EducaTV no YouTube e volte aqui para ver sua pontuação e o ranking.</p>
+    <p class="sub">Abrindo o YouTube em <b id="gcount">4</b>s</p>
+    <a class="btn yt" id="gbtn" href="https://www.youtube.com/@educatvcampinas?sub_confirmation=1" target="_blank" rel="noopener">Inscrever-se no YouTube agora</a>
+    <p class="sub" style="font-size:.9rem">Depois de se inscrever, volte para esta página: o resultado aparece sozinho.</p>
+  </div>
+</section>
+
+<section class="screen" id="s-end">
+  <img class="brand sm" alt="EducaTV Campinas" src="logo.jpg">
+  <div class="endgrid">
+    <div class="panel rescard">
+      <div class="rtitle disp" id="rtitle"></div>
+      <div class="rname" id="rname"></div>
+      <div class="big" id="rscore">0</div>
+      <div class="stats">
+        <div><b id="rhit">0/8</b><small>acertos</small></div>
+        <div><b id="rcombo">0</b><small>sequência</small></div>
+        <div><b id="rbest">0</b><small>recorde</small></div>
+      </div>
+    </div>
+    <div class="panel rankbox">
+      <div class="rhead"><h2>Ranking</h2><span id="live"></span></div>
+      <ol id="rank"></ol>
+      <div class="pos" id="pos"></div>
+    </div>
+  </div>
+  <div class="panel soc"><p>Siga a EducaTV Campinas</p><div id="socs"></div></div>
+  <div class="panel links"><p>Copie os links e mande para os amigos</p><div id="links"></div></div>
+  <div class="panel closing">
+    <img src="logo.jpg" alt="Coruja mascote da EducaTV">
+    <div><h2 class="disp">Obrigado por jogar!</h2><p>A EducaTV Campinas e o BentoTec agradecem a sua participação. Inscreva-se no canal, siga no Instagram e continue com a gente. Até a próxima!</p></div>
+  </div>
+  <button class="btn ghost" id="again">Jogar de novo</button>
+  <div class="foot">Fim · EducaTV × BentoTec</div>
+</section>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>
